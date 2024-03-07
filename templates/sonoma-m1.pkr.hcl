@@ -8,7 +8,7 @@ packer {
 }
 
 source "tart-cli" "tart" {
-  from_ipsw    = "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/042-78241/B45074EB-2891-4C05-BCA4-7463F3AC0982/UniversalMac_14.3_23D56_Restore.ipsw"
+  from_ipsw    = "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-61990/47F0DD06-1106-4F2E-9CD6-AE6B361A0EC6/UniversalMac_14.4_23E214_Restore.ipsw"
   vm_name      = "sonoma-m1"
   cpu_count    = 4
   memory_gb    = 6
@@ -149,8 +149,8 @@ build {
     ]
   }
   provisioner "file" {
-    source      = pathexpand("~/Downloads/Xcode_15.2.xip")
-    destination = "/Users/admin/Downloads/Xcode_15.2.xip"
+    source      = pathexpand("~/Downloads/Xcode_15.3.xip")
+    destination = "/Users/admin/Downloads/Xcode_15.3.xip"
   }
   provisioner "shell" {
     inline = [
@@ -159,7 +159,7 @@ build {
       "brew install xcodesorg/made/xcodes",
       "brew link xcodes",
       "xcodes version",
-      "xcodes install 15.2 --experimental-unxip --path /Users/admin/Downloads/Xcode_15.2.xip --select --empty-trash",
+      "xcodes install 15.3 --experimental-unxip --path /Users/admin/Downloads/Xcode_15.3.xip --select --empty-trash",
       "xcodebuild -downloadAllPlatforms",
       "xcodebuild -runFirstLaunch",
     ]
