@@ -10,7 +10,7 @@ packer {
   source "tart-cli" "tart" {
     from_ipsw    = "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-61990/47F0DD06-1106-4F2E-9CD6-AE6B361A0EC6/UniversalMac_14.4_23E214_Restore.ipsw"
     vm_name      = "sonoma-m1-unity"
-    cpu_count    = 4
+    cpu_count    = 6
     memory_gb    = 6
     disk_size_gb = 120
     ssh_password = "admin"
