@@ -8,7 +8,7 @@ packer {
   }
   
   source "tart-cli" "tart" {
-    from_ipsw    = "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-61990/47F0DD06-1106-4F2E-9CD6-AE6B361A0EC6/UniversalMac_14.4_23E214_Restore.ipsw"
+    from_ipsw    = "https://updates.cdn-apple.com/2024SpringFCS/fullrestores/062-01897/C874907B-9F82-4109-87EB-6B3C9BF1507D/UniversalMac_14.5_23F79_Restore.ipsw"
     vm_name      = "sonoma-m1-unity"
     cpu_count    = 6
     memory_gb    = 6
@@ -139,17 +139,17 @@ packer {
     provisioner "shell" {
       inline = [
         "source ~/.zprofile",
-        "echo 'Installing Unity 2022.3.20f1'",
-        "wget https://download.unity3d.com/download_unity/61c2feb0970d/MacEditorInstallerArm64/Unity-2022.3.20f1.pkg",
-        "sudo installer -pkg Unity-2022.3.20f1.pkg -target /",
-        "rm Unity-2022.3.20f1.pkg",
+        "echo 'Installing Unity 2022.3.28f1'",
+        "wget https://download.unity3d.com/download_unity/6bae5ce6b222/MacEditorInstallerArm64/Unity-2022.3.28f1.pkg",
+        "sudo installer -pkg Unity-2022.3.28f1.pkg -target /",
+        "rm Unity-2022.3.28f1.pkg",
         "echo 'Installing macOS and Windows Build Support'",
-        "wget https://download.unity3d.com/download_unity/61c2feb0970d/MacEditorTargetInstaller/UnitySetup-Mac-IL2CPP-Support-for-Editor-2022.3.20f1.pkg",
-        "wget https://download.unity3d.com/download_unity/61c2feb0970d/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.20f1.pkg",
-        "sudo installer -pkg UnitySetup-Mac-IL2CPP-Support-for-Editor-2022.3.20f1.pkg -target /",
-        "rm UnitySetup-Mac-IL2CPP-Support-for-Editor-2022.3.20f1.pkg",
-        "sudo installer -pkg UnitySetup-Windows-Mono-Support-for-Editor-2022.3.20f1.pkg -target /",
-        "rm UnitySetup-Windows-Mono-Support-for-Editor-2022.3.20f1.pkg",
+        "wget https://download.unity3d.com/download_unity/6bae5ce6b222/MacEditorTargetInstaller/UnitySetup-Mac-IL2CPP-Support-for-Editor-2022.3.28f1.pkg",
+        "wget https://download.unity3d.com/download_unity/6bae5ce6b222/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.28f1.pkg",
+        "sudo installer -pkg UnitySetup-Mac-IL2CPP-Support-for-Editor-2022.3.28f1.pkg -target /",
+        "rm UnitySetup-Mac-IL2CPP-Support-for-Editor-2022.3.28f1.pkg",
+        "sudo installer -pkg UnitySetup-Windows-Mono-Support-for-Editor-2022.3.28f1.pkg -target /",
+        "rm UnitySetup-Windows-Mono-Support-for-Editor-2022.3.28f1.pkg",
         "/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchmode || true"
       ]
     }
@@ -158,7 +158,7 @@ packer {
         "source ~/.zprofile",
         "echo 'Installing Git Runner Firmware'",
         "mkdir actions-runner && cd actions-runner",
-        "curl -o actions-runner-osx-arm64-2.314.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.314.1/actions-runner-osx-arm64-2.314.1.tar.gz && tar xzf ./actions-runner-osx-arm64-2.314.1.tar.gz"
+        "curl -o actions-runner-osx-arm64-2.316.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.316.1/actions-runner-osx-arm64-2.316.1.tar.gz && tar xzf ./actions-runner-osx-arm64-2.316.1.tar.gz"
       ]
     }
   }
