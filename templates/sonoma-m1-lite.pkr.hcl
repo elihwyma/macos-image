@@ -150,7 +150,7 @@ build {
       "source ~/.zprofile",
       "echo 'Installing Git Runner Firmware'",
       "mkdir actions-runner && cd actions-runner",
-      "curl -o actions-runner-osx-arm64-2.316.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.316.1/actions-runner-osx-arm64-2.316.1.tar.gz && tar xzf ./actions-runner-osx-arm64-2.316.1.tar.gz"
+      "curl -o actions-runner-osx-arm64-2.317.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-osx-arm64-2.317.0.tar.gz && tar xzf ./actions-runner-osx-arm64-2.317.0.tar.gz"
     ]
   }
 }
