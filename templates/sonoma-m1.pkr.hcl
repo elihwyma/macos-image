@@ -165,11 +165,6 @@ build {
     ]
   }
   provisioner "shell" {
-    inline = [
-      "source ~/.zprofile",
-      "echo 'Installing Git Runner Firmware'",
-      "mkdir actions-runner && cd actions-runner",
-      "curl -o actions-runner-osx-arm64-2.317.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-osx-arm64-2.317.0.tar.gz && tar xzf ./actions-runner-osx-arm64-2.317.0.tar.gz"
-    ]
+    script = "install-git-runner.sh"
   }
 }
